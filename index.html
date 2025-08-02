@@ -45,6 +45,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
 
   <script>
+    var scenes = ["scène1", "scène2", "scène3", "scène4", "scène5", "scène6", "scène7"];
+    <!-- Sélection aléatoire -->
+    var randomScene = scenes[Math.floor(Math.random() * scenes.length)];
+    
     var viewer = pannellum.viewer('viewer', {
   "default": {
     "firstScene": "scène1",
