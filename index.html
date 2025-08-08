@@ -45,19 +45,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
 
   <script>
-    var scenes = ["scène1", "scène2", "scène3", "scène4", "scène5", "scène6", "scène7"];
-    <!-- Sélection aléatoire -->
-    var randomScene = scenes[Math.floor(Math.random() * scenes.length)];
     
+    var scenes = ["scène1", "scène2", "scène3", "scène4", "scène5", "scène6", "scène7", "scène7"];
+    var randomScene = scenes[Math.floor(Math.random() * scenes.length)];
     var viewer = pannellum.viewer('viewer', {
+
   "default": {
     "firstScene": "randomScene",
     "sceneFadeDuration": 1000
   },
   "scenes": {
     "scène1": {
-      "title": "1 Éolienne, Cabane Rouillé et Champs de moutarde",
-      "panorama": "QQWJ6677.JPG"
+      "title": "Un bout de champ à Boucherville",
+      "panorama": "BouChamp.JPG"
     },
     "scène2": {
       "title": "2 Sainte-Brigide au matin",
@@ -82,7 +82,10 @@
     "scène7": {
       "title": "7 Église de Sainte-Julie à première vue",
       "panorama": "eglise3604.JPG"
-    }
+    },
+     "scène8": {
+      "title": "1 Éolienne, Cabane Rouillé et Champs de moutarde",
+      "panorama": "QQWJ6677.JPG"
   }
 });
   </script>
