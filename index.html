@@ -38,6 +38,7 @@
   <button onclick="viewer.loadScene('scène5')">Vue 5</button>
   <button onclick="viewer.loadScene('scène6')">Vue 6</button>
   <button onclick="viewer.loadScene('scène7')">Vue 7</button>
+  <button onclick="viewer.loadScene('scène8')">Vue 8</button>
   <div id="viewer"></div>
 
   <!-- Include pannellum.js for 360 viewing -->
@@ -46,7 +47,7 @@
 
   <script>
     
-    var scenes = ["scène1", "scène2", "scène3", "scène4", "scène5", "scène6", "scène7", "scène7"];
+    var scenes = ["scène1", "scène2", "scène3", "scène4", "scène5", "scène6", "scène7", "scène8"];
     var randomScene = scenes[Math.floor(Math.random() * scenes.length)];
     var viewer = pannellum.viewer('viewer', {
 
