@@ -31,14 +31,14 @@
       <img src="logo_sans_fond_blanc2.PNG" alt="ODD">
     </a>
   </div>
-  <button onclick="viewer.loadScene('scène1')">Vue 1</button>
-  <button onclick="viewer.loadScene('scène2')">Vue 2</button>
-  <button onclick="viewer.loadScene('scène3')">Vue 3</button>
-  <button onclick="viewer.loadScene('scène4')">Vue 4</button>
-  <button onclick="viewer.loadScene('scène5')">Vue 5</button>
-  <button onclick="viewer.loadScene('scène6')">Vue 6</button>
-  <button onclick="viewer.loadScene('scène7')">Vue 7</button>
-  <button onclick="viewer.loadScene('scène8')">Vue 8</button>
+  <button onclick="viewer.loadScene('scene1')">Vue 1</button>
+  <button onclick="viewer.loadScene('scene2')">Vue 2</button>
+  <button onclick="viewer.loadScene('scene3')">Vue 3</button>
+  <button onclick="viewer.loadScene('scene4')">Vue 4</button>
+  <button onclick="viewer.loadScene('scene5')">Vue 5</button>
+  <button onclick="viewer.loadScene('scene6')">Vue 6</button>
+  <button onclick="viewer.loadScene('scene7')">Vue 7</button>
+  <button onclick="viewer.loadScene('scene8')">Vue 8</button>
   <div id="viewer"></div>
 
   <!-- Include pannellum.js for 360 viewing -->
@@ -46,46 +46,44 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
 
   <script>
-    
- pannellum.viewer('viewer', {
-        "type": "equirectangular",
-        "scène1": "BouChamp.JPG",
-        "scène2": "djiflypano.JPG",
-        "autoLoad": true
-
+    var viewer = pannellum.viewer('viewer', {
+  "default": {
+    "firstScene": "scene8",
+    "sceneFadeDuration": 1000
   },
   "scenes": {
-    "scène1": {
-      "title": "Un bout de champ à Boucherville",
-      "panorama": "BouChamp.JPG"
+    "scene1": {
+      "title": "1 Éolienne, Cabane Rouillé et Champs de moutarde",
+      "panorama": "QQWJ6677.JPG"
     },
-    "scène2": {
+    "scene2": {
       "title": "2 Sainte-Brigide au matin",
       "panorama": "djiflypano.jpg"
     },
-     "scène3": {
+     "scene3": {
       "title": "3 Sainte-Brigide Sous les nuages",
       "panorama": "dji_fly_pano.jpg"
     },
-    "scène4": {
-      "title": "4 Église de Sainte-Julie Coté Presbitaire",
+    "scene4": {
+      "title": "4 Église de Sainte-Julie Coté cimetière",
       "panorama": "eglise3601.JPG"
     },
-    "scène5": {
-      "title": "5 Église de Sainte-Julie vu du pignon",
+    "scene5": {
+      "title": "5 Église de Sainte-Julie Coté stationnement",
       "panorama": "eglise3602.JPG"
     },
-    "scène6": {
-      "title": "6 Église de Sainte-Julie Altitude Croix",
+    "scene6": {
+      "title": "6 Église de Sainte-Julie Coté presbitaire",
       "panorama": "eglise3603.JPG"
     },
-    "scène7": {
+    "scene7": {
       "title": "7 Église de Sainte-Julie à première vue",
       "panorama": "eglise3604.JPG"
     },
-     "scène8": {
-      "title": "1 Éolienne, Cabane Rouillé et Champs de moutarde",
-      "panorama": "QQWJ6677.JPG"
+    "scene8": {
+      "title": "8 Un bout de champ à Boucherville",
+      "panorama": "BouChamp"
+    }
   }
 });
   </script>
