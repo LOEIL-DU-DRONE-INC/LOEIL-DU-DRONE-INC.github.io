@@ -47,11 +47,12 @@
 
   <script>
     
-    var viewer = pannellum.viewer('viewer', {
+ pannellum.viewer('viewer', {
+        "type": "equirectangular",
+        "scène1": "BouChamp.JPG",
+        "scène2": "djiflypano.JPG",
+        "autoLoad": true
 
-  "default": {
-    "firstScene": "randomScene",
-    "sceneFadeDuration": 1000
   },
   "scenes": {
     "scène1": {
