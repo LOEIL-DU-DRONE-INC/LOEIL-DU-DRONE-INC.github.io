@@ -52,7 +52,7 @@
     
     @media (min-width: 768px){
       .app {
-        grid-template-rows: 1fr; /* on bascule la barre en bas via position:fixed */
+        grid-template-rows: 1fr;
       }
       .controls {
         position: fixed;
@@ -119,5 +119,63 @@
       <img src="logo_sans_fond_blanc2.PNG" alt="L’Œil du Drone inc.">
     </a>
   </div>
+  <script>
+    var viewer = pannellum.viewer('viewer', {
+  "default": {
+    "firstScene": "scene1",
+    "sceneFadeDuration": 1000
+  },
+  "scenes": {
+    "scene1": {
+      "title": "1 Éolienne, Cabane Rouillé et Champs de moutarde",
+      "panorama": "QQWJ6677.JPG"
+    },
+    "scene2": {
+      "title": "2 Sainte-Brigide au matin",
+      "panorama": "djiflypano.jpg"
+    },
+    "scene3": {
+      "title": "3 Église de Sainte-Julie à première vue",
+      "panorama": "eglise3604.JPG"
+    },
+    "scene4": {
+      "title": "4 Voie ferrée à Boucherville",
+      "panorama": "Chemin de fer Boucherville.JPG"
+    },
+     "scene5": {
+      "title": "5 abords des îles de Boucherville ",
+      "panorama": "360Idb.JPG"
+    },
+    "scene6": {
+      "title": "VERREAULT TRANSPORT au dessus de la 400 pieds.",
+      "panorama": "NKHI4430.JPG"
+    },
+     "scene7": {
+      "title": "au dessus d'un champs d'une Ferme.",
+      "panorama": "AVGJ0991.JPG"
+    },
+     "scene8": {
+      "title": "Vue 360 au dessus des abors du fleuve St-Laurent.",
+      "panorama": "ANVB2332.JPG"
+    },
+    "scene9": {
+      "title": "Fête pour Grand-Maman Marthe",
+      "panorama": "party360.JPG"
+    },
+    "scene10": {
+      "title": "En famille",
+      "panorama": "party361.JPG"
+    },
+    "scene11": {
+        "title": "Varenne en début de soirée",
+        "panorama": "Var1.JPG"
+      },
+    "scene12": {
+      "title": "Varenne en soirée",
+      "panorama": "Var2.JPG"
+    }
+  }
+});
+</script>
 </body>
 </html>
