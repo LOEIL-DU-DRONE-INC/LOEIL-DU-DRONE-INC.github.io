@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-version="buttons-1.1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ODD Inc. — Accueil</title>
   <meta name="description" content="Sélectionnez une scène 360° pour lancer le visionneur.">
   <meta property="og:title" content="ODD INC.">
-  <meta property="og:description" content="Votre unique plateforme pour le Visionnement de photos 360°.">
+  <meta property="og:description" content="Votre guichet unique pour le Visionnement de photos 360°.">
   <meta name="theme-color" content="#0f172a">
   <style>
     :root{ --bg:#0b1220; --text:#e5e7eb; }
@@ -15,7 +15,7 @@
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
       background: var(--bg) url('BHWE7000.JPG') no-repeat center center fixed;
-      background-size: 100%;
+      background-size: cover;
       color: var(--text);
       line-height:1.6;
     }
@@ -24,51 +24,57 @@
       background: rgba(0,0,0,.35);
       border-bottom: 1px solid rgba(125,211,252,.12);
     }
-    .wrap{max-width:1100px;margin-inline:auto;padding: 0 clamp(16px,4vw,28px);}
+    .wrap{max-width:1400px;margin-inline:auto;padding: 0 clamp(16px,4vw,28px);}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
-    #logo img { height: clamp(50px, 4vw, 60px); width: auto; }
-    main{ height: calc(100vh - 64px); display:flex; align-items:center; justify-content:center; }
+    #logo img { height: clamp(50px, 4vw, 80px); width: auto; }
+    main{ min-height: calc(100vh - 64px); display:grid; place-items:center; padding: clamp(12px, 3vw, 40px); }
 
-    /* Boutons */
-    .controls{
-      position: static;
-      z-index: 20;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px 12px;
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(6px);
-      border-radius: 16px;
+   
+    body .controls{
+      --pad: clamp(20px, 4vw, 40px);
+      --gap: clamp(14px, 3vw, 26px);
+      --radius: clamp(16px, 3vw, 28px);
+      --btn-pad-y: clamp(14px, 2.8vw, 24px);
+      --btn-pad-x: clamp(18px, 4vw, 36px);
+      --btn-font: clamp(18px, 2.8vw, 28px);
+      --shadow: 0 12px 36px rgba(0,0,0,.45);
+
+      width: min(1400px, 95vw) !important;
+      margin: 0 auto !important;
+      padding: var(--pad) !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)) !important;
+      gap: var(--gap) !important;
+      background: rgba(0,0,0,0.55) !important;
+      backdrop-filter: blur(10px) saturate(150%) !important;
+      border: 1px solid rgba(125,211,252,.18) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: var(--shadow) !important;
     }
-    .scene-btn {
-      font: 600 16px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      padding: 12px 20px;
-      min-width: 100px;
-      color: #fff;
-      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,.2);
-      transition: all 0.2s ease-in-out;
-      text-decoration: none;
-      text-align: center;
-      display: inline-block;
+    body .scene-btn {
+      font: 800 var(--btn-font)/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+      padding: var(--btn-pad-y) var(--btn-pad-x) !important;
+      color: #fff !important;
+      background: linear-gradient(135deg, #1676ff, #0b5ed7 60%) !important;
+      border: 0 !important;
+      border-radius: calc(var(--radius) - 8px) !important;
+      cursor: pointer !important;
+      box-shadow: 0 8px 22px rgba(13,110,253,.45) !important;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease !important;
+      text-decoration: none !important;
+      text-align: center !important;
+      display: inline-block !important;
+      letter-spacing: .2px !important;
     }
-    .scene-btn:hover {
-      background: linear-gradient(135deg, #0b5ed7, #0a58ca);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,.3);
+    body .scene-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 14px 28px rgba(13,110,253,.55) !important; filter: brightness(1.07) !important; }
+    body .scene-btn:active { transform: translateY(0) !important; box-shadow: 0 5px 16px rgba(13,110,253,.35) !important; }
+    body .scene-btn:focus-visible { outline: 3px solid rgba(13,110,253,.60) !important; outline-offset: 4px !important; border-radius: calc(var(--radius) - 2px) !important; }
+
+    @media (max-width: 720px){
+      header { position: static; }
+      main { min-height: calc(100vh - 64px); align-items: start; }
     }
-    .scene-btn:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(0,0,0,.2);
-    }
-    .scene-btn:focus {
-      outline: 3px solid rgba(13,110,253,0.5);
-      outline-offset: 2px;
-    }
+
     footer{ text-align:center; padding:16px 0; }
   </style>
 </head>
