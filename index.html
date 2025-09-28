@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ODD Inc. — Accueil</title>
+  <meta name="description" content="Sélectionnez une scène 360° pour lancer le visionneur.">
+  <meta property="og:title" content="ODD INC.">
+  <meta property="og:description" content="Votre unique plateforme pour le Visionnement de photos 360°.">
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    :root{ --bg:#0b1220; --text:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
+      background: var(--bg) url('BHWE7000.JPG') no-repeat center center fixed;
+      background-size: 100%;
+      color: var(--text);
+      line-height:1.6;
+    }
+    header{
+      position: sticky; top:0; z-index:10; backdrop-filter: saturate(150%) blur(6px);
+      background: rgba(0,0,0,.35);
+      border-bottom: 1px solid rgba(125,211,252,.12);
+    }
+    .wrap{max-width:1100px;margin-inline:auto;padding: 0 clamp(16px,4vw,28px);}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+    #logo img { height: clamp(50px, 4vw, 60px); width: auto; }
+    main{ height: calc(100vh - 64px); display:flex; align-items:center; justify-content:center; }
+
+    /* Boutons */
+    .controls{
+      position: static;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+    }
+    .scene-btn {
+      font: 600 16px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      padding: 12px 20px;
+      min-width: 100px;
+      color: #fff;
+      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+    .scene-btn:hover {
+      background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.3);
+    }
+    .scene-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    }
+    .scene-btn:focus {
+      outline: 3px solid rgba(13,110,253,0.5);
+      outline-offset: 2px;
+    }
+    footer{ text-align:center; padding:16px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav" role="navigation" aria-label="En-tête">
+      <div id="logo">
+        <a href="https://loeildudrone.ca" target="_blank" rel="noopener">
+          <img src="logo_sans_fond_blanc.png" alt="Logo LDD">
+        </a>
+      </div>
+      <nav aria-label="Navigation principale"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="controls" role="navigation" aria-label="Sélection de scènes">
+      <a class="scene-btn" href="viewer.html?scene=scene1">Vue 1</a>
+      <a class="scene-btn" href="viewer.html?scene=scene2">Vue 2</a>
+      <a class="scene-btn" href="viewer.html?scene=scene3">Vue 3</a>
+      <a class="scene-btn" href="viewer.html?scene=scene4">Vue 4</a>
+      <a class="scene-btn" href="viewer.html?scene=scene5">Vue 5</a>
+      <a class="scene-btn" href="viewer.html?scene=scene6">Vue 6</a>
+      <a class="scene-btn" href="viewer.html?scene=scene7">Vue 7</a>
+      <a class="scene-btn" href="viewer.html?scene=scene8">Vue 8</a>
+      <a class="scene-btn" href="viewer.html?scene=scene9">Vue 9</a>
+      <a class="scene-btn" href="viewer.html?scene=scene10">Vue 10</a>
+      <a class="scene-btn" href="viewer.html?scene=scene11">Vue 11</a>
+      <a class="scene-btn" href="viewer.html?scene=scene12">Vue 12</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> L'ŒIL DU DRONE INC.
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
