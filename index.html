@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-version="buttons-1.1">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +20,42 @@
       line-height:1.6;
     }
     header{
-      position: sticky; top:0; z-index:10; backdrop-filter: saturate(150%) blur(6px);
+      position: sticky; 
+      top:0; 
+      z-index:10; 
+      backdrop-filter: saturate(150%) blur(6px);
       background: rgba(0,0,0,.35);
       border-bottom: 1px solid rgba(125,211,252,.12);
     }
     .wrap{max-width:1400px;margin-inline:auto;padding: 0 clamp(16px,4vw,28px);}
     .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
     #logo img { height: clamp(50px, 4vw, 80px); width: auto; }
-    main{ min-height: calc(100vh - 64px); display:grid; place-items:center; padding: clamp(12px, 3vw, 40px); }
 
-   
+    /* Bannière */
+    .banner {
+      text-align: center;
+      padding: clamp(20px, 4vw, 40px);
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px) saturate(150%);
+      border-top: 1px solid rgba(125,211,252,.18);
+      border-bottom: 1px solid rgba(125,211,252,.18);
+    }
+    .banner h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    main{ 
+      min-height: calc(100vh - 64px); 
+      display:grid; 
+      place-items:center; 
+      padding: clamp(12px, 3vw, 40px); 
+    }
+
     body .controls{
       --pad: clamp(20px, 4vw, 40px);
       --gap: clamp(14px, 3vw, 26px);
@@ -87,6 +113,11 @@
         </a>
       </div>
       <nav aria-label="Navigation principale"></nav>
+    </div>
+
+    <!-- Bannière -->
+    <div class="banner">
+      <h1>Photos 360° de L'ŒIL DU DRONE INC.</h1>
     </div>
   </header>
 
