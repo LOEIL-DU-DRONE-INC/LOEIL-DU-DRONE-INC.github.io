@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ODD Inc. — Accueil</title>
+  <meta name="description" content="Sélectionnez une scène 360° pour lancer le visionneur.">
+  <meta property="og:title" content="ODD INC.">
+  <meta property="og:description" content="Votre plateforme pour le Visionnement de photos 360°.">
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    :root{ --bg:#0b1220; --text:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
+      background: var(--bg) url('BHWE7000.JPG') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      line-height:1.6;
+    }
+    header{
+      position: sticky; 
+      top:0; 
+      z-index:10; 
+      backdrop-filter: saturate(150%) blur(6px);
+      background: rgba(0,0,0,.35);
+      border-bottom: 1px solid rgba(125,211,252,.12);
+    }
+    .wrap{max-width:1400px;margin-inline:auto;padding: 0 clamp(16px,4vw,28px);}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+    #logo img { height: clamp(50px, 4vw, 80px); width: auto; }
+
+    /* Bannière */
+    .banner {
+      text-align: center;
+      padding: clamp(20px, 4vw, 40px);
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px) saturate(150%);
+      border-top: 1px solid rgba(125,211,252,.18);
+      border-bottom: 1px solid rgba(125,211,252,.18);
+    }
+    .banner h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 14px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .banner h2 {
+      margin: 8px 0 0;
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .banner h3 {
+      margin: 8px 0 0;
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 500;
+      color: #562ec5;
+    }
+    .banner h4 {
+      margin: 8px 0 0;
+      font-size: clamp(16px, 2.5vw, 28px);
+      font-weight: 500;
+      color: #562ec5;
+    }
+    
+    
+    
+    main{ 
+      min-height: calc(100vh - 64px); 
+      display:grid; 
+      place-items:center; 
+      padding: clamp(12px, 3vw, 40px); 
+    }
+    
+
+    body .controls{
+      --pad: clamp(20px, 4vw, 40px);
+      --gap: clamp(14px, 3vw, 26px);
+      --radius: clamp(16px, 3vw, 28px);
+      --btn-pad-y: clamp(14px, 2.8vw, 24px);
+      --btn-pad-x: clamp(18px, 4vw, 36px);
+      --btn-font: clamp(18px, 2.8vw, 28px);
+      --shadow: 0 12px 36px rgba(0,0,0,.45);
+
+      width: min(1400px, 95vw) !important;
+      margin: 0 auto !important;
+      padding: var(--pad) !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)) !important;
+      gap: var(--gap) !important;
+      background: rgba(0,0,0,0.55) !important;
+      backdrop-filter: blur(10px) saturate(150%) !important;
+      border: 1px solid rgba(125,211,252,.18) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: var(--shadow) !important;
+    }
+    body .scene-btn {
+      font: 800 var(--btn-font)/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+      padding: var(--btn-pad-y) var(--btn-pad-x) !important;
+      color: #fff !important;
+      background: linear-gradient(135deg, #1676ff, #0b5ed7 60%) !important;
+      border: 0 !important;
+      border-radius: calc(var(--radius) - 8px) !important;
+      cursor: pointer !important;
+      box-shadow: 0 8px 22px rgba(13,110,253,.45) !important;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease !important;
+      text-decoration: none !important;
+      text-align: center !important;
+      display: inline-block !important;
+      letter-spacing: .2px !important;
+    }
+    body .scene-btn:hover { transform: translateY(-3px) !important; box-shadow: 0 14px 28px rgba(13,110,253,.55) !important; filter: brightness(1.07) !important; }
+    body .scene-btn:active { transform: translateY(0) !important; box-shadow: 0 5px 16px rgba(13,110,253,.35) !important; }
+    body .scene-btn:focus-visible { outline: 3px solid rgba(13,110,253,.60) !important; outline-offset: 4px !important; border-radius: calc(var(--radius) - 2px) !important; }
+
+    @media (max-width: 720px){
+      header { position: static; }
+      main { min-height: calc(100vh - 64px); align-items: start; }
+    }
+
+    footer{ text-align:center; padding:16px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav" role="navigation" aria-label="En-tête">
+      <div id="logo">
+        <a href="https://loeildudrone.ca" target="_blank" rel="noopener">
+          <img src="logo_sans_fond_blanc.png" alt="Logo LDD">
+        </a>
+      </div>
+      <nav aria-label="Navigation principale"></nav>
+    </div>
+
+    <!-- Bannière -->
+    <div class="banner">
+      <h1>Notre si web est en refonte, voici quelques prise de vue et autres projets effectué dernièrement en attandant. </h1>
+      <h2>L'ŒIL DU DRONE INC.</h2>
+      <h3>Photos 360° de quelques lieux à Longueuil. </h3>
+      <h4><a href="https://vdlgmov.github.io/" target="_blank" rel="noopener"></a></h4>
+
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="controls" role="navigation" aria-label="Sélection de scènes">
+      <a class="scene-btn" href="viewer.html?scene=scene1">Thetford Mines</a>
+      <a class="scene-btn" href="viewer.html?scene=scene2">Sainte-Brigide-d'Iberville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene3">Sainte-Julie</a>
+      <a class="scene-btn" href="viewer.html?scene=scene4">Boucherville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene5">Boucherville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene6">Sainte-Brigide-d'Iberville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene7">Sainte-Brigide-d'Iberville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene8">Boucherville</a>
+      <a class="scene-btn" href="viewer.html?scene=scene9">Longueuil</a>
+      <a class="scene-btn" href="viewer.html?scene=scene10">Montréal</a>
+      <a class="scene-btn" href="viewer.html?scene=scene11">Vieux-Port de Montréal</a>
+      <a class="scene-btn" href="viewer.html?scene=scene12">Montréal</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> L'ŒIL DU DRONE INC.
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
